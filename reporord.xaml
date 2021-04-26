@@ -51,12 +51,13 @@
         </Style>
     </Window.Resources>
     <Grid x:Name="brdTitle" Background="#222226" Width="500" Height="350">
-        <Button x:Name="btnRep" Content="Ремонт техники" HorizontalAlignment="Left" Margin="89,125,0,0" VerticalAlignment="Top" Width="160"  Foreground="#FFB8B8B7" BorderBrush="{x:Null}" Background="#FF444446" Height="110" Style="{DynamicResource ButtonStyle1}"  />
-        <Button x:Name="btnOrd" Content="Сделать заказ" HorizontalAlignment="Left" Margin="280,125,0,0" VerticalAlignment="Top" Width="160" RenderTransformOrigin="0.387,1.15" Foreground="#FFB8B8B7" BorderBrush="{x:Null}" Background="#FF444446" Height="110"  Style="{DynamicResource ButtonStyle1}" ></Button>
+        <Button x:Name="btnRep" Content="Ремонт техники" HorizontalAlignment="Left" Margin="71,125,0,0" VerticalAlignment="Top" Width="160"  Foreground="#FFB8B8B7" BorderBrush="{x:Null}" Background="#FF444446" Height="110" Style="{DynamicResource ButtonStyle1}"  />
+        <Button x:Name="btnOrd" Content="Сделать заказ" HorizontalAlignment="Left" Margin="270,125,0,0" VerticalAlignment="Top" Width="160" RenderTransformOrigin="0.387,1.15" Foreground="#FFB8B8B7" BorderBrush="{x:Null}" Background="#FF444446" Height="110"  Style="{DynamicResource ButtonStyle1}" ></Button>
         <Border BorderThickness="1" HorizontalAlignment="Left" Height="20" Margin="-3,0,0,0" VerticalAlignment="Top" Width="509"/>
         <Image HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="20" Source="img/hardware_4489.ico" />
         <Label Content="Услуги" HorizontalAlignment="Left" Margin="20,-3,0,0" VerticalAlignment="Top" Width="90" Height="28" HorizontalContentAlignment="Left" Foreground="#FFB8B8B7"/>
         <Button x:Name="btnExit" Content="Х" HorizontalAlignment="Left" Margin="484,-5,-1,0" VerticalAlignment="Top" Width="17" Height="23" Foreground="#FFB8B8B7" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Click="btnExit_Click" />
         <Button x:Name="btnMin" Content="_" HorizontalAlignment="Left" Margin="468,-7,0,0" VerticalAlignment="Top" Width="16" Height="25" Foreground="#FFB8B8B7" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Click="btnMin_Click" />
+        <Button x:Name="btnBack" Content="Выйти из системы" HorizontalAlignment="Left" Margin="192,250,0,0" VerticalAlignment="Top" Width="105"  Foreground="#FFB8B8B7" BorderBrush="{x:Null}" Background="#FF444446" Height="21" Style="{DynamicResource ButtonStyle1}" Click="btnBack_Click"  />
     </Grid>
 </Window>

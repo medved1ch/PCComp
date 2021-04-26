@@ -39,7 +39,7 @@ namespace PCComp
                 Func f = new Func();
                 if (f.CheckPassword(usr.Password, f.GetHashPassword(pbPassw.Password)))
                 {
-                    MessageBox.Show("Здравствуйте");
+                    MessageBox.Show($"Здравствуйте, {usr.FirstName}");
                     reporord reporord = new reporord();
                     reporord.Show();
                     MainWindow.Hide();

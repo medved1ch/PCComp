@@ -41,6 +41,13 @@ namespace PCComp
         {
             this.WindowState = WindowState.Minimized;
         }
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow MainWindow = new MainWindow();
+            MainWindow.Show();
+            this.Close();
+        }
     }
     }
 

@@ -26,17 +26,31 @@ namespace PCComp
                 MessageBox.Show("Заполните все поля", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
 
             }
+            m:
             Func f = new Func();
-            authorisation emp = new authorisation
+            
+                authorisation emp = new authorisation
+                {
+                    FirstName = tbFN.Text,
+                    LastName = tbLN.Text,
+                    Login = tbLog.Text,
+                    Password = f.GetHashPassword(pbPassw.Password),
+                };
+            try
             {
-                FirstName = tbFN.Text,
-                LastName = tbLN.Text,
-                Login = tbLog.Text,
-                Password = f.GetHashPassword(pbPassw.Password),
-            };
-            db.authorisation.Add(emp);
-            db.SaveChanges();
-            MessageBoxResult res = MessageBox.Show("Сотрудник добавлен! Повторить?", "Добавление", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                db.authorisation.Add(emp);
+                db.SaveChanges();
+            }
+            catch(System.Data.Entity.Infrastructure.DbUpdateException)
+            {
+                db.authorisation.Remove(emp);
+                db.SaveChanges();
+                MessageBox.Show("Имя пользователя занято");
+                tbLog.Clear();
+                return;
+            }
+            
+            MessageBoxResult res = MessageBox.Show("Пользователь добавлен! Повторить?", "Добавление", MessageBoxButton.YesNo, MessageBoxImage.Question);
             if (res == MessageBoxResult.No)
             {
                 MainWindow MainWindow = new MainWindow();
